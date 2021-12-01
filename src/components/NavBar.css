@@ -1,0 +1,134 @@
+:root{
+    --green-text: rgb(0,140,69);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none; 
+}
+
+
+body {
+    background: #eee; 
+}
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; 
+}
+
+header{
+    
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.header{
+    padding: 2rem 2%;
+    animation: deArriba;
+    animation-duration: 1s;
+    height: 75px;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s ease;
+}
+
+.header.active{
+    height: 45px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.header .icons{
+    color: var(--green-text);
+    display: flex;
+}
+
+.header .icons div{
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: .4s ease;
+    font-size: 2rem;
+}
+
+.header .icons div:hover{
+    background-color: var(--green-text);
+    color: #eee;
+}
+
+.icon-logo{
+    margin-right: .5rem;
+    font-size: 2.5rem;
+    color: var(--green-text);
+}
+
+.logo{
+    color: var(--green-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a{
+    font-weight: 500;
+    color: var(--green-text);
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    transition: .4s ease;
+    padding: .5rem;
+}
+
+.navbar a:hover{
+    color: #eee;
+    background: var(--green-text);
+}
+
+
+#menu-toggle{
+    display: none;
+}
+
+#carrito-menu{
+    width: 600px;
+    height: 100vh;
+    background-color: #eee;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transition: all .4s ease;
+    transform: translateX(100%);
+}
+
+#carrito-menu.show{
+    transform: translateX(0);
+    position: absolute;
+    width: 600px;
+    height: 100vh;
+    top: 100%;
+    right: 0;
+}
