@@ -8,12 +8,12 @@ function NavBar() {
           <a href="#" className="logo"> VESTIRSI </a>
 
           <nav className="navbar" id="navbar">
-            <a href="#">HOME</a>
-            <a href="#">HOMBRE</a>
-            <a href="#">MUJER</a>
-            <a href="#">ACCESORIOS</a>
-            <a href="#">NOSOTROS</a>
-            <a href="#">CONTACTO</a>
+            <a href="#home">HOME</a>
+            <a href="#hombre">HOMBRE</a>
+            <a href="#mujer">MUJER</a>
+            <a href="#accesorios">ACCESORIOS</a>
+            <a href="#nosotros">NOSOTROS</a>
+            <a href="#contacto">CONTACTO</a>
           </nav>
 
           <div className="icons">
