@@ -1,10 +1,13 @@
-/* import logo from './logo.svg'; */
-import './components/NavBar.css';
-import NavBar from './components/NavBar.js'
+import NavBar from './components/NavBar/NavBar.js'
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 function App() {
   return (
-    <NavBar />
+    <div>
+      <NavBar />
+      <ItemListContainer msg="Mensaje de Prueba" />
+    </div>
+    
     );
 }
 
