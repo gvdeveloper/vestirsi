@@ -1,0 +1,43 @@
+.container-btn-carrito{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 2rem;
+}
+
+.content-btn-carrito-cantidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.content-btn-carrito-cantidad .btn-count{
+    padding: 1rem;
+    background-color: var(--green-text);
+    border: none;
+    border-radius: .5rem;
+    color: #eee;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.content-btn-carrito-cantidad p{
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 3.5rem;
+    
+    height: 3.5rem;
+}
+
+.btn-addCarrito{
+    padding: 3px;
+    background-color: var(--green-text);
+    border: none;
+    border-radius: .5rem;
+    color: #eee;
+    
+    font-size: 1.5rem;
+}
+
