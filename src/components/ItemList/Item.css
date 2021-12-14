@@ -1,0 +1,15 @@
+.items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+} 
+
+.items p{
+    font-size: 1.5rem;
+}
+
+.imgItem{
+    width: 400px;
+    height: 300px;
+}

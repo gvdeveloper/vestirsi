@@ -10,8 +10,8 @@ function ItemListContainer(props){
         <section className="contenedor">
             <div>
                 <h2 style={textColor} className="container">{props.msg}</h2>
-                < Item/>
-            <ItemCount onAdd={cantidad => console.log(`Se agregaron ${cantidad} productos`)}/>
+                <Item/>
+                <ItemCount onAdd={cantidad => console.log(`Se agregaron ${cantidad} productos`)}/>
             </div>
         </section>
     )

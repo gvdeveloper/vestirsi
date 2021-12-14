@@ -1,8 +1,10 @@
 .container-btn-carrito{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
     gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-btn-carrito-cantidad{
@@ -27,7 +29,6 @@
     padding: 1rem;
     font-size: 1.5rem;
     width: 3.5rem;
-    
     height: 3.5rem;
 }
 
@@ -37,6 +38,7 @@
     border: none;
     border-radius: .5rem;
     color: #eee;
+    width: 40%;
     
     font-size: 1.5rem;
 }
