@@ -1,6 +1,6 @@
 import "../../styles.css"
 import CardWidget from "../CardWidget/CardWidget.js"
-
+/* import {Link} from "react-router-dom" */
 function NavBar() {
     return (
       <header>
@@ -8,6 +8,7 @@ function NavBar() {
           <a href="#" className="logo"> VESTIRSI </a>
 
           <nav className="navbar" id="navbar">
+            {/* <a><Link to={`/Prueba1`}>HOME</Link></a> */}
             <a href="#home">HOME</a>
             <a href="#hombre">HOMBRE</a>
             <a href="#mujer">MUJER</a>
