@@ -1,16 +1,14 @@
 import React from "react";
+import Item from "./Item";
+import "./Item.css"
 
-
-const ItemList = ({product})=>{
-    return (
-      <div>
-        <div className="cardInfo">
-          <img src={product.image} className="imgItem"></img>
-          <h2>{product.title}</h2>
-          <p>${product.price}</p>
-        </div>
-      </div>
-    )
-  }
+const ItemList = ({ products }) => {
+  return (
+    <div className="cardContainer">
+      {products.map((item => <Item {...item} />)
+      )}
+    </div>
+  );
+};
 
 export default ItemList;

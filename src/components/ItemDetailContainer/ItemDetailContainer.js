@@ -1,34 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
+import "../../styles.css";
+/* import ItemDetail from "./ItemDetail"; */
+import mockProducts from "../ItemList/MockProducts";
 
-const getItem = ()=>{
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [state, setState] = useState([]);
-    
-  const arrayItem = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      setState([{id:"1",title:"Nike Air",price:"$800"}]);
-      resolve(true);
-    }, 2000);
-  });
-  arrayItem.then()
-}
-
-
-
-
-
-
-
-
-function ItemDetailContainer(){
-    return(
-        <section className="contenedor">
-            <div>
-               {getItem}
-            </div>
-        </section>
-    )
+function ItemDetailContainer() {
+  const getItem = async ()=>{
+    const arrayItemDetail = await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(mockProducts);
+      }, 2000);
+    });
+    const res = arrayItemDetail.JSON();
+    res.then();
+  } 
+  
+  getItem.map((detail)=>{
+    return (
+      <div key={detail.id}>
+        {getItem.detalle}
+      </div>
+    );
+  })
 }
 
 export default ItemDetailContainer;
-

@@ -152,3 +152,4 @@ html::-webkit-scrollbar-thumb{
 
 @import "./components/NavBar/NavBar.css";
 @import "./components/ItemCount/ItemCount.css";
+@import "./components/ItemList/Item.css"
