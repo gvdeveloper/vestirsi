@@ -1,11 +1,9 @@
 import React from "react";
 import "./Item.css"
 
-
-
 function Item ({...item}){
   return (
-    <div className="cardInfo">
+    <div className="cardInfo" key={item.id}>
       <div className="imgContain">
         <img className="imgItem" src={item.image} alt={item.title}></img>
       </div>

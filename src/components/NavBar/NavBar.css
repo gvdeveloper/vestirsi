@@ -8,6 +8,7 @@ header{
     animation: deArriba;
     animation-duration: 1s;
     height: 75px;
+    background-color: #eee;
     z-index: 9999;
     position: fixed;
     top: 0;

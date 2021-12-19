@@ -1,0 +1,22 @@
+.cardContainerDetailPrincipal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: navajowhite;
+  }
+
+  .cardContainerDetailPrincipal .titular{
+      margin: 60px 0;
+  }
+
+  .cardContainerDetailPrincipal .cardContainerDetail {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }

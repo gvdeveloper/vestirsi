@@ -1,26 +1,41 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import "../../styles.css";
-/* import ItemDetail from "./ItemDetail"; */
 import mockProducts from "../ItemList/MockProducts";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-  const getItem = async ()=>{
-    const arrayItemDetail = await new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(mockProducts);
-      }, 2000);
-    });
-    const res = arrayItemDetail.JSON();
-    res.then();
-  } 
+  const [getDetail, setState] = useState([]);
   
-  getItem.map((detail)=>{
-    return (
-      <div key={detail.id}>
-        {getItem.detalle}
-      </div>
-    );
-  })
+  const arrayItemDetail = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        setState(mockProducts)
+        resolve(true);
+      }, 2000);
+    }); 
+    useEffect(() => {
+      arrayItemDetail()
+    }, []);
+
+
+   /*  const getItem= () =>{
+      return (
+        <div>
+          
+        </div>
+      )
+    } */
+
+
+
+   return(
+    <section className="contenedor">
+    <div>
+     <ItemDetail getDetail={getDetail}/> 
+    </div>
+    </section>
+  )
+  
+  
 }
 
 export default ItemDetailContainer;

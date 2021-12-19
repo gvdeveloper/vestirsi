@@ -1,20 +1,19 @@
 import "../../styles.css"
 import CardWidget from "../CardWidget/CardWidget.js"
-/* import {Link} from "react-router-dom" */
+import {Link} from "react-router-dom"
 function NavBar() {
     return (
       <header>
         <section className="header contenedor">
-          <a href="#" className="logo"> VESTIRSI </a>
+          <Link to="/" className="logo">VESTIRSI</Link>
 
           <nav className="navbar" id="navbar">
-            {/* <a><Link to={`/Prueba1`}>HOME</Link></a> */}
-            <a href="#home">HOME</a>
-            <a href="#hombre">HOMBRE</a>
-            <a href="#mujer">MUJER</a>
-            <a href="#accesorios">ACCESORIOS</a>
-            <a href="#nosotros">NOSOTROS</a>
-            <a href="#contacto">CONTACTO</a>
+            <Link to="/">Home</Link>
+            <Link to="/">Zapatillas</Link>
+            <a href="#mujer">Gorras</a>
+            <a href="#accesorios">Carteras</a>
+            <a href="#nosotros">Remeras</a>
+            
           </nav>
 
           <div className="icons">
