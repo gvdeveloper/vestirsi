@@ -6,7 +6,13 @@ import "./Item.css"
 const ItemList = ({ products }) => {
   return (
     <div className="cardContainer">
-      {products.map((item => <Item key={item.id} {...item} />))}
+      {products.map((item => 
+        <div>
+          <NavLink to={`/ItemDetailContainer/${item.id}`}>
+              <Item key={item.id} {...item} />
+          </NavLink>
+        </div>))
+      }
     </div>
   );
 };
