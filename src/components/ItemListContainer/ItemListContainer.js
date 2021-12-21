@@ -12,14 +12,15 @@ import "../../styles.css";
 function ItemListContainer() {
   const [products, setState] = useState([]);
   const arrayItem = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      setState(mockProducts);
-      resolve(true);
+    setTimeout(() => {      
+      resolve(mockProducts);
     }, 2000);
   });
 
   useEffect(() => {
-    arrayItem.then();
+    arrayItem
+    .then(response => setState(response))
+    .catch(error => console.log(error))
   }, []);
   //FIN PROMISE
 

@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import "../../styles.css";
-import mockProducts from "../ItemList/MockProducts";
+import mockItemDetail from "./MockItemDetail"
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
@@ -8,23 +8,14 @@ function ItemDetailContainer() {
   
   const arrayItemDetail = new Promise((resolve, reject) => {
       setTimeout(() => {
-        setState(mockProducts)
-        resolve(true);
+        resolve(mockItemDetail);
       }, 2000);
     }); 
     useEffect(() => {
-      arrayItemDetail()
+      arrayItemDetail
+      .then(response => setState(response))
+      .catch(error => console.log(error))
     }, []);
-
-
-   /*  const getItem= () =>{
-      return (
-        <div>
-          
-        </div>
-      )
-    } */
-
 
 
    return(

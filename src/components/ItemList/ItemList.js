@@ -6,6 +6,19 @@ import "./Item.css"
 const ItemList = ({ products }) => {
   return (
     <div className="cardContainer">
+      {products.map((item => <Item key={item.id} {...item} />))}
+    </div>
+  );
+};
+export default ItemList;
+
+
+
+
+
+/* const ItemList = ({ products }) => {
+  return (
+    <div className="cardContainer">
       {products.map((item => <li key={item.id}>
         <NavLink to={`/Item/${item.id}`}>
           <Item {...item} />
@@ -15,6 +28,4 @@ const ItemList = ({ products }) => {
     </div>
   );
 };
-export default ItemList;
-
-/*  */
+export default ItemList; */

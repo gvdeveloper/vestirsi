@@ -4,11 +4,11 @@ import "./ItemDetail.css"
 function ItemDetail({ getDetail }) {
   return (
     <div className="cardContainerDetailPrincipal">
-      <h2 className="titular">DETALLES</h2>
       <div className="cardContainerDetail">
         {getDetail.map((detail) => {
           return (
             <div key={detail.detalle} className="cardInfo">
+              <h2 className="titular">DETALLES</h2>
               <div className="imgContain">
                 <img
                   className="imgItem"
