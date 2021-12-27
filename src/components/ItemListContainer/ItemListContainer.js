@@ -38,13 +38,6 @@ function ItemListContainer() {
         <ItemList products={products}/> 
         </div>
         <p>{value}</p>
-        <ItemCount
-          onAdd={(cantidad) =>
-            console.log(`Se agregaron ${cantidad} productos`)
-          }
-        />
-        
-
       </div>
     </section>
     </main>
