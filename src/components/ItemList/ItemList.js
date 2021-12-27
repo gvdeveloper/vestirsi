@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Item from "./Item";
 import "./Item.css"
 
@@ -8,9 +8,9 @@ const ItemList = ({ products }) => {
     <div className="cardContainer">
       {products.map((item => 
         <div>
-          <NavLink to={`/ItemDetailContainer/${item.id}`}>
+          <Link to="/item/:id">
               <Item key={item.id} {...item} />
-          </NavLink>
+          </Link>
         </div>))
       }
     </div>

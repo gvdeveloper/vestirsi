@@ -2,7 +2,6 @@ import React, {useState,useEffect} from "react";
 import "../../styles.css";
 import mockItemDetail from "./MockItemDetail"
 import ItemDetail from "./ItemDetail";
-import { NavLink } from "react-router-dom";
 
 function ItemDetailContainer() {
   const [getDetail, setState] = useState([]);

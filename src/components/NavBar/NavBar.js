@@ -1,6 +1,7 @@
 import "../../styles.css"
 import CardWidget from "../CardWidget/CardWidget.js"
 import {Link} from "react-router-dom"
+
 function NavBar() {
     return (
       <header>
@@ -9,10 +10,10 @@ function NavBar() {
 
           <nav className="navbar" id="navbar">
             <Link to="/">Home</Link>
-            <Link to="/">Zapatillas</Link>
-            <a href="#mujer">Gorras</a>
-            <a href="#accesorios">Carteras</a>
-            <a href="#nosotros">Remeras</a>
+            <Link to="/category/:categoryId">Zapatillas</Link>
+            <Link to="/category/:categoryId">Gorras</Link>
+            <Link to="/category/:categoryId"> Carteras</Link>
+            <Link to="/category/:categoryId"> Remeras</Link>
             
           </nav>
 

@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ItemList from "../ItemList/ItemList";
 import mockProducts from "../ItemList/MockProducts";
 import ItemCount from "../ItemCount/ItemCount";
 import "../../styles.css";
-
+import cartContext from "../../context/cartContext";
 /* const textColor = {
   color: "rgb(0,140,69)",
 };
  */
 //INICIO PROMISE
 function ItemListContainer() {
+  
+  const value = useContext(cartContext)
+
   const [products, setState] = useState([]);
   const arrayItem = new Promise((resolve, reject) => {
     setTimeout(() => {      
@@ -34,6 +37,7 @@ function ItemListContainer() {
         <div>
         <ItemList products={products}/> 
         </div>
+        <p>{value}</p>
         <ItemCount
           onAdd={(cantidad) =>
             console.log(`Se agregaron ${cantidad} productos`)
