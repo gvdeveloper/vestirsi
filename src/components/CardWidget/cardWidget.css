@@ -1,0 +1,11 @@
+.shoppingCart{
+    color: var(--green-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoppingCart:hover{
+    background-color: var(--green-text);
+    color: #eee;
+}

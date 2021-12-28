@@ -20,6 +20,7 @@ function App() {
       {/* </CustomContext> */}
       <Route exact path="/category/:id" element={<ItemListContainer></ItemListContainer>}></Route>
       <Route exact path="/item/:id" element={<ItemDetailContainer></ItemDetailContainer>}></Route>
+      
       </Routes>
       
     </div>

@@ -37,9 +37,10 @@
     background-color: var(--green-text);
     border: none;
     border-radius: .5rem;
-    color: #eee;
     width: 40%;
     
     font-size: 1.5rem;
 }
-
+.btn-addCarrito a{
+    color: #eee;
+}

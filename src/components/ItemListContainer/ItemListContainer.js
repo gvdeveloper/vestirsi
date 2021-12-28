@@ -4,13 +4,12 @@ import mockProducts from "../ItemList/MockProducts";
 import ItemCount from "../ItemCount/ItemCount";
 import "../../styles.css";
 import cartContext from "../../context/cartContext";
-/* const textColor = {
-  color: "rgb(0,140,69)",
-};
- */
+import {useParams} from 'react-router-dom'
+
+
 //INICIO PROMISE
 function ItemListContainer() {
-  
+  const {id: categoryId} = useParams();
   const value = useContext(cartContext)
 
   const [products, setState] = useState([]);
@@ -27,6 +26,9 @@ function ItemListContainer() {
   }, []);
   //FIN PROMISE
 
+  const filter = id =>{
+     products.filter((item)=> item.categoria === id)
+  }
   return (
     <main>
       <section className="contenedor">
@@ -35,7 +37,7 @@ function ItemListContainer() {
           {props.msg}
         </h2> */}
         <div>
-        <ItemList products={products}/> 
+        <ItemList products={products} onClick={()=> filter}/> 
         </div>
         <p>{value}</p>
       </div>

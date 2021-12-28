@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+import "./cardWidget.css"
 function CardWidget(){
     return(
         <div id="carrito-toggle">
-            <span className="material-icons-round">shopping_cart</span>
+            <Link to="/cart"><span className="material-icons-round shoppingCart">shopping_cart</span></Link>
         </div>
     )
 };
