@@ -5,8 +5,8 @@ import ItemDetail from "./ItemDetail";
 
 
 function ItemDetailContainer() {
-  const [getDetail, setState] = useState([]);
 
+  const [getDetail, setState] = useState([]);
 
   const arrayItemDetail = new Promise((resolve, reject) => {
       setTimeout(() => {

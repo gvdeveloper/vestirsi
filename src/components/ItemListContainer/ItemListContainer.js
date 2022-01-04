@@ -26,9 +26,7 @@ function ItemListContainer() {
   }, []);
   //FIN PROMISE
 
-  const filter = id =>{
-     products.filter((item)=> item.categoria === id)
-  }
+  
   return (
     <main>
       <section className="contenedor">
@@ -37,7 +35,7 @@ function ItemListContainer() {
           {props.msg}
         </h2> */}
         <div>
-        <ItemList products={products} onClick={()=> filter}/> 
+        <ItemList products={products}/> 
         </div>
         <p>{value}</p>
       </div>
