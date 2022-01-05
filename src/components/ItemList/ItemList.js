@@ -7,9 +7,9 @@ const ItemList = ({ products }) => {
   return (
     <div className="cardContainer">
       {products.map((item => <li key={item.id}>
-        <NavLink to={`/Item/${item.id}`}>
+        
           <Item {...item} />
-        </NavLink>   
+        
       </li>)
       )}
     </div>

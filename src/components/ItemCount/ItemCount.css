@@ -39,7 +39,12 @@
     border-radius: .5rem;
     width: 40%;
     color: #eee;
-    
     font-size: 1.5rem;
+}
+
+.btn-addCarrito:hover{
+    cursor: pointer;
+    color: #eee;
+    background-color: rgb(36, 109, 8);
 }
 

@@ -1,14 +1,16 @@
 import React from "react";
+import { NavLink, useParams } from "react-router-dom";
 import "./Item.css"
 
-function Item ({...item}){
+function Item ({id, title, price, image}){
+const {id:idItem} = useParams()
   return (
-    <div className="cardInfo" key={item.id}>
+    <div className="cardInfo" key={id}>
       <div className="imgContain">
-        <img className="imgItem" src={item.image} alt={item.title}></img>
+        <img className="imgItem" src={image} alt={title}></img>
       </div>
-      <h2>{item.title}</h2>
-      <p>${item.price}</p>
+      <NavLink to={`/item/${idItem}`}><h2>{title}</h2></NavLink>
+      <p>${price}</p>
     </div>
   )
 }
