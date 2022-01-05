@@ -16,7 +16,11 @@
 }
 
 .content-btn-carrito-cantidad .btn-count{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
+    font-size: 2rem;
     background-color: var(--green-text);
     border: none;
     border-radius: .5rem;

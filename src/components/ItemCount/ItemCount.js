@@ -17,11 +17,11 @@ function ItemCount({ valorInicial = 0, stock = 4, onAdd }) {
   return (
     <div className="container-btn-carrito">
       <div className="content-btn-carrito-cantidad">
-        <button onClick={resta} disabled={resta <= 0} className="btn-count">
+        <button onClick={resta} disabled={cantidad <= 0} className="btn-count">
           -
         </button>
         <p>{cantidad}</p>
-        <button onClick={suma} disabled={suma >= stock} className="btn-count">
+        <button onClick={suma} disabled={cantidad >= stock} className="btn-count">
           +
         </button>
       </div>
