@@ -1,17 +1,15 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Item from "./Item";
 import "./Item.css";
 
 const ItemList = ({ products }) => {
   return (
     <div className="cardContainer">
-      {products.map((item => <li key={item.id}>
-        
+      {products.map((item) => (
+        <li key={item.id}>
           <Item {...item} />
-        
-      </li>)
-      )}
+        </li>
+      ))}
     </div>
   );
 };

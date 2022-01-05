@@ -1,11 +1,11 @@
 import React from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
-function ItemDetail({ getDetail, stock }) {
+function ItemDetail({ getDetail,stock }) {
   return (
     <div className="cardContainerDetailPrincipal">
       <div className="cardContainerDetail">
-        {getDetail.map((detail) => {
+        {getDetail.map((...detail) => {
           return (
             <div key={detail.id} className="cardInfo">
               <h2 className="titular">DETALLES</h2>

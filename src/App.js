@@ -2,7 +2,8 @@ import NavBar from './components/NavBar/NavBar.js'
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-/* import CartContext from './context/cartContext.js'; */
+/* import CartContext from './context/cartContext.js';
+import CustomContext from './context/customContext'; */
 /* import { useState } from 'react/cjs/react.development'; */
 
 

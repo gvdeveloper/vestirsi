@@ -1,29 +1,42 @@
 import React, { useState, useEffect, useContext } from "react";
 import ItemList from "../ItemList/ItemList";
 import mockProducts from "../ItemList/MockProducts";
-import ItemCount from "../ItemCount/ItemCount";
 import "../../styles.css";
 import cartContext from "../../context/cartContext";
 import {useParams} from 'react-router-dom'
 
-
 //INICIO PROMISE
 function ItemListContainer() {
   const {id: categoryId} = useParams();
+  const [products, setState] = useState([]);
+  useEffect(() => getItemsAsyncAwait(), [categoryId]);
+
   const value = useContext(cartContext)
 
-  const [products, setState] = useState([]);
-  const arrayItem = new Promise((resolve, reject) => {
+  const arrayItem = ()=> new Promise((resolve, reject) => {
     setTimeout(() => {      
       resolve(mockProducts);
     }, 2000);
   });
 
-  useEffect(() => {
+  const getItemsAsyncAwait = async () => {
+		try {
+			const products = await arrayItem();
+			setState(handleFilterData(products));
+		} catch (error) {
+			console.error('ERROR', '🤦‍♂️ Algo malio sal', error);
+		}
+	};
+
+  const handleFilterData = (data) => (categoryId && data)
+		? data.filter(item => item.categoria === categoryId)
+		: data;
+
+ /*  useEffect(() => {
     arrayItem
     .then(response => setState(response))
     .catch(error => console.log(error))
-  }, []);
+  }, []); */
   //FIN PROMISE
 
   
@@ -31,11 +44,10 @@ function ItemListContainer() {
     <main>
       <section className="contenedor">
       <div>
-        {/* <h2 style={textColor} className="container">
-          {props.msg}
-        </h2> */}
         <div>
+        
         <ItemList products={products}/> 
+       
         </div>
         <p>{value}</p>
       </div>
