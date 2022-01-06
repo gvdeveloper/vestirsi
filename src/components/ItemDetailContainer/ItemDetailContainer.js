@@ -22,15 +22,15 @@ function ItemDetailContainer() {
     const getItemAsyncAwait = async () => {
       try {
         const product = await arrayItemDetail();
-        handleFilterData(product);
+        FiltroData(product);
       } catch (error) {
-        console.log('ERROR', '🤦‍♂️ Algo malio sal', error);
+        console.log('ERROR', 'Algo salio sal', error);
       }
     };
 
-    const handleFilterData = data => {
+    const FiltroData = data => {
       if (idItem && data) {
-        const _item = data.filter(item => item.id === idItem);
+        const _item = data.filter(item => item.id.toString() === idItem);
         if (_item.length === 1) {
           setState(_item[0]);
         } else {
@@ -50,7 +50,7 @@ function ItemDetailContainer() {
    return(
     <section className="contenedor">
     <div>
-      <ItemDetail getDetail={getDetail}/> 
+     { getDetail && <ItemDetail getDetail={getDetail}/> }
     </div>
     </section>
   )

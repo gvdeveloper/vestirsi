@@ -5,20 +5,20 @@ function ItemDetail({ getDetail,stock }) {
   return (
     <div className="cardContainerDetailPrincipal">
       <div className="cardContainerDetail">
-        {getDetail.map((...detail) => {
-          return (
-            <div key={detail.id} className="cardInfo">
+        {/* {getDetail.map((...detail) => {
+          return ( */}
+            <div key={getDetail.id} className="cardInfo">
               <h2 className="titular">DETALLES</h2>
               <div className="imgContain">
                 <img
                   className="imgItem"
-                  src={detail.image}
-                  alt={detail.title}
+                  src={getDetail.image}
+                  alt={getDetail.title}
                 ></img>
               </div>
-              <h2>{detail.title}</h2>
-              <p>${detail.price}</p>
-              <p>Detalle: {detail.detalle}</p>
+              <h2>{getDetail.title}</h2>
+              <p>${getDetail.price}</p>
+              <p>Detalle: {getDetail.detalle}</p>
               <ItemCount
                 stock={stock}
                 onAdd={(cantidad) =>
@@ -27,7 +27,7 @@ function ItemDetail({ getDetail,stock }) {
               />
             </div>
           );
-        })}
+        {/* })} */}
       </div>
     </div>
   );
