@@ -27,11 +27,11 @@ function ItemCount({ valorInicial = 0, stock = 4, onAdd }) {
       </div>
  
       <button
-        onClick={<NavLink to="/cart"> {() => onAdd(cantidad)} </NavLink> }
+        onClick={() => onAdd(cantidad)}
         disabled={cantidad > stock || cantidad <= 0}
         className="btn-addCarrito"
       >
-       AGREGAR
+       <NavLink to="/cart"> AGREGAR</NavLink>
       </button>
       
     </div>

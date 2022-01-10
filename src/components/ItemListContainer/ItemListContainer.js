@@ -2,15 +2,12 @@ import React, { useState, useEffect, useContext } from "react";
 import ItemList from "../ItemList/ItemList";
 import mockProducts from "../ItemList/MockProducts";
 import "../../styles.css";
-import cartContext from "../../context/cartContext";
 import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
   const { id: categoryId } = useParams();
   const [products, setState] = useState([]);
   useEffect(() => getItemsAsyncAwait(), [categoryId]);
-
-  const value = useContext(cartContext);
 
   const arrayItem = () =>
     new Promise((resolve, reject) => {
@@ -40,7 +37,7 @@ function ItemListContainer() {
           <div>
             <ItemList products={products} />
           </div>
-          <p>{value}</p>
+          
         </div>
       </section>
     </main>

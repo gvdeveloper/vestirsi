@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./ItemDetail.css";
 import ItemCount from "../ItemCount/ItemCount";
+/* import cartContext from "../../context/cartContext"; */
 function ItemDetail({ getDetail,stock }) {
+
+  /* const {title, price, detalle, image,} = getDetail; */
+  
+ /*  const valueContext = useContext(cartContext); */
+ /*  const event = new CustomEvent('clickDetalle', {detail:{bubbles:true}})
+  const handleClick = () =>{
+    window.dispatchEvent(event)
+  } */
   return (
     <div className="cardContainerDetailPrincipal">
       <div className="cardContainerDetail">
@@ -21,10 +30,12 @@ function ItemDetail({ getDetail,stock }) {
               <p>Detalle: {getDetail.detalle}</p>
               <ItemCount
                 stock={stock}
+                /* onClick={handleClick} */
                 onAdd={(cantidad) =>
                   console.log(`Se agregaron ${cantidad} productos`)
                 }
               />
+             {/*  {valueContext.map((value)=> <p>{value}</p>)} */}
             </div>
           );
         {/* })} */}

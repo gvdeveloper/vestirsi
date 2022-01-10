@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, {useContext} from "react";
 import "./cardWidget.css"
 function CardWidget(){
     return(
