@@ -41,12 +41,6 @@ function ItemDetailContainer() {
       }
     };
 
-    /* useEffect(() => {
-      arrayItemDetail
-      .then(response => setState(response))
-      .catch(error => console.log(error))
-    }, []); */
-
    return(
     <section className="contenedor">
     <div>

@@ -9,6 +9,19 @@ function ItemListContainer() {
   const [products, setState] = useState([]);
   useEffect(() => getItemsAsyncAwait(), [categoryId]);
 
+  //ejercicio clase 13
+  /* const carrito = [{id:1, title:"remera", price: 10}, {id:2, title:"gorra", price: 50}]
+  const precioTotal = carrito.reduce((preValue, newVal)=>{
+    return preValue.price + newVal.price 
+   }) 
+   console.log("Precio Total" + precioTotal)
+  let order = { */
+    // buyer: {name:"Jorge", phone:44441212, mail: "test@test.com"}, //este se hardcodea para no hacer un formulario
+    // items: [{id:1, title:"remera", price: 10}, {id:2, title:"gorra", price: 50}], //este se tiene que rellenar solo se agregue al carro
+    //total: precioTotal //es el total entre el id 1 + id 2
+  //}
+// fin erjercicio clase 13
+
   const arrayItem = () =>
     new Promise((resolve, reject) => {
       setTimeout(() => {

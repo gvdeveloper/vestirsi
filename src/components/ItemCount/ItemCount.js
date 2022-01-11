@@ -31,7 +31,7 @@ function ItemCount({ valorInicial = 0, stock = 4, onAdd }) {
         disabled={cantidad > stock || cantidad <= 0}
         className="btn-addCarrito"
       >
-       <NavLink to="/cart"> AGREGAR</NavLink>
+      AGREGAR
       </button>
       
     </div>
