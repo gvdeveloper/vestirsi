@@ -17,7 +17,7 @@ export const CartContextProvider = ({children}) => {
 		let cartAux = [];
 		if (isInCart(item)) {
 			console.log('Esta en el 🛒');
-			cartElement = cartItems.find(element => element.item.id === item.id);
+			cartElement = cartItems.find(element => element.item.id.toString() === item.id);
 			
 			cartElement.count += count;
 			cartAux = [...cartItems];
