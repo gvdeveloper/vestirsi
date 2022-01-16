@@ -17,7 +17,7 @@ export const CartContextProvider = ({children}) => {
 		let cartAux = [];
 		if (isInCart(item)) {
 			console.log('Esta en el 🛒');
-			cartElement = cartItems.find(element => element.item.id.toString() === item.id);
+			cartElement = cartItems.find(element => element.item.id === item.id);
 			
 			cartElement.count += count;
 			cartAux = [...cartItems];
@@ -41,7 +41,7 @@ export const CartContextProvider = ({children}) => {
 
 	const isInCart = item => cartItems && cartItems.some(element => element.item.id === item.id);
 
-	const removeOneItem = item => {
+	/* const removeOneItem = item => {
 		if (isInCart(item)) {
 			const cartElement = cartItems.find(element => element.item.id === item.id);
 			if (cartElement.count === 1) {
@@ -58,7 +58,7 @@ export const CartContextProvider = ({children}) => {
 				setCartItems([...cart]);
 			}
 		}
-	};
+	}; */
 
 	const handleTotalPriceByItem = () => {
 
@@ -101,7 +101,7 @@ export const CartContextProvider = ({children}) => {
 			value={{
 				addItem,
 				removeItem,
-				removeOneItem,
+				/* removeOneItem, */
 				clear,
 				isInCart,
 				cartItems,
